@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon-32x32.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News Homepage</title>
+  </head>
+  <body>
+    <div class="hidden bg-black/50 fixed inset-0 z-10" id="overlay"></div>
+    <div
+      id="mobile-menu"
+      class="fixed h-full w-full top-0 shadow-2xl bg-neutral-100 flex flex-col justify-center p-5 transition-all z-10 mobile-menu-close"
+    >
+      <ul class="space-y-5 text-2xl">
+        <li><a href="#" class="link-secondary">Home</a></li>
+        <li><a href="#" class="link-secondary">New</a></li>
+        <li><a href="#" class="link-secondary">Popular</a></li>
+        <li><a href="#" class="link-secondary">Trending</a></li>
+        <li><a href="#" class="link-secondary">Categories</a></li>
+      </ul>
+      <div class="absolute top-5 right-25 cursor-pointer" id="mm-close-button">
+        <svg width="32" height="31" xmlns="http://www.w3.org/2000/svg">
+          <g fill="#00001A" fill-rule="evenodd">
+            <path d="m2.919.297 28.284 28.284-2.122 2.122L.797 2.419z" />
+            <path d="M.797 28.581 29.081.297l2.122 2.122L2.919 30.703z" />
+          </g>
+        </svg>
+      </div>
+    </div>
+    <div id="app">
+      <div class="container mx-auto">
+        <header>
+          <nav class="flex justify-between items-center p-5">
+            <a href="#">
+              <img src="./src/assets/images/logo.svg" class="w-10 h-8" />
+            </a>
+            <ul class="hidden lg:flex gap-5">
+              <li><a href="#" class="link-primary">Home</a></li>
+              <li><a href="#" class="link-primary">New</a></li>
+              <li><a href="#" class="link-primary">Popular</a></li>
+              <li><a href="#" class="link-primary">Trending</a></li>
+              <li><a href="#" class="link-primary">Categories</a></li>
+            </ul>
+            <div class="lg:hidden cursor-pointer" id="mm-open-button">
+              <svg width="40" height="17" xmlns="http://www.w3.org/2000/svg">
+                <g fill="#00001A" fill-rule="evenodd">
+                  <path d="M0 0h40v3H0zM0 7h40v3H0zM0 14h40v3H0z" />
+                  <path d="M0 0h40v3H0z" />
+                </g>
+              </svg>
+            </div>
+          </nav>
+        </header>
+        <main class="grid grid-cols-1 lg:grid-cols-3 gap-10 gap-y-15 p-5">
+          <article class="lg:col-span-2 grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <img
+              src="/images/image-web-3-desktop.jpg"
+              class="lg:col-span-2 min-h-[300px] object-cover"
+            />
+            <h1 class="text-5xl">The Bright Future of Web 3.0</h1>
+            <div>
+              <p class="text-neutral-400">
+                We dive into the next evolution of the web that claims to put
+                the power of the platforms back into the hands of the people.
+                But is it really fulfilling its promise?
+              </p>
+              <button class="btn btn-primary mt-5">Read More</button>
+            </div>
+          </article>
+          <aside
+            class="bg-neutral-900 p-5 text-neutral-100 grid grid-cols-1 gap-y-10"
+          >
+            <h1 class="text-primary">New</h1>
+            <div>
+              <h4>
+                <a href="#" class="link-primary">Hydrogen VS Electric Cars</a>
+              </h4>
+              <p class="text-neutral-500 mb-5">
+                Will hydrogen-fueled cars ever catch up to EVs?
+              </p>
+              <hr />
+            </div>
+            <div>
+              <h4>
+                <a href="#" class="link-primary"
+                  >The Downsides of AI Artistry</a
+                >
+              </h4>
+              <p class="text-neutral-500 mb-5">
+                What are the possible adverse effects of on-demand AI image
+                generation?
+              </p>
+              <hr />
+            </div>
+            <div>
+              <h4>
+                <a href="#" class="link-primary">Is VC Funding Drying Up?</a>
+              </h4>
+              <p class="text-neutral-500 mb-5">
+                Private funding by VC firms is down 50% YOY. We take a look at
+                what that means.
+              </p>
+            </div>
+          </aside>
+          <section
+            class="lg:col-span-3 grid grid-cols-1 lg:grid-cols-3 gap-5 pb-5"
+          >
+            <article class="flex gap-5">
+              <img
+                src="/images/image-retro-pcs.jpg"
+                class="w-20 h-25 object-cover"
+              />
+              <div>
+                <h3 class="text-secondary">01</h3>
+                <h4>
+                  <a href="#" class="link-secondary">Reviving Retro PCs</a>
+                </h4>
+                <p>What happens when old PCs are given modern upgrades?</p>
+              </div>
+            </article>
+            <article class="flex gap-5">
+              <img
+                src="/images/image-top-laptops.jpg"
+                class="w-20 h-25 object-cover"
+              />
+              <div>
+                <h3 class="text-secondary">02</h3>
+                <h4>
+                  <a href="#" class="link-secondary">Top 10 Laptops of 2022</a>
+                </h4>
+                <p>Our best picks for various needs and budgets.</p>
+              </div>
+            </article>
+            <article class="flex gap-5">
+              <img
+                src="/images/image-gaming-growth.jpg"
+                class="w-20 h-25 object-cover"
+              />
+              <div>
+                <h3 class="text-secondary">03</h3>
+                <h4>
+                  <a href="#" class="link-secondary">The Growth of Gaming</a>
+                </h4>
+                <p>How the pandemic has sparked fresh opportunities.</p>
+              </div>
+            </article>
+          </section>
+        </main>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
